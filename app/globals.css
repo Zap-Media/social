@@ -1,25 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root[data-theme="light"] {
-  --text: #0b0e0e;
-  --background: #f5f9fa;
-  --primary: #4ca5bd;
-  --secondary: #8bd1e4;
-  --accent: #4ec8e9;
+  --base: #ffffff;
+  --content: #000000;
 }
 
 :root[data-theme="dark"] {
-  --text: #f1f4f4;
-  --background: #05090a;
-  --primary: #429ab3;
-  --secondary: #1b6074;
-  --accent: #168fb1;
+  --base: #000000;
+  --content: #ffffff;
 }
 
 body{
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--base);
+  color: var(--content);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.main{
+  padding: 1rem;
+}
+
+.btn{
+  border: 1px solid var(--content);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--base);
+  color: var(--content);
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover{
+  background-color: var(--content);
+  color: var(--base);
+}
+
+.btn-grid{
+  display: inline-grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+}
+
+@media only screen and (max-width: 600px)  {
+  .btn-grid{
+    grid-auto-flow: row;
+  }
 }
